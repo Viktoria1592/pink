@@ -1,0 +1,32 @@
+{
+  "name": "pink",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viktoria1592/pink.git"
+  },
+  "author": "Viktoria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Viktoria1592/pink/issues"
+  },
+  "homepage": "https://github.com/Viktoria1592/pink#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "npm": "^5.5.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "normalize.css": "^7.0.0"
+  }
+}
