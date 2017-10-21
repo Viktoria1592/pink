@@ -44,8 +44,17 @@ div::after {
     margin-left: -$size;
   }
 }
+
+
 @mixin wrapper {
     margin: 0 auto;
+    width: 320px;
+    @media (min-width: 700px) and (max-width:1199px) {
+            width: 620px;
+        }
+        @media (min-width:1200px) {
+            width: 940px;
+}
 }
 
 /*
@@ -81,7 +90,7 @@ $breakpoints: (
   'phone-wide': 480px,
   'phablet': 560px,
   'tablet-small': 640px,
-  'tablet': 768px,
+  'tablet': 700px,
   'tablet-wide': 1024px,
   'desktop': 1200px,
   'desktop-wide': 1440px

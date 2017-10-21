@@ -1,20 +1,30 @@
 @font-face {
-    font-family: 'PTSansNarrow';
-    src: url('../fonts/PTSansNarrowRegular.eot');
-    src: url('../fonts/PTSansNarrowRegular.eot') format('embedded-opentype'), url('../fonts/PTSansNarrowRegular.woff2') format('woff2'), url('../fonts/PTSansNarrowRegular.woff') format('woff'), url('../fonts/PTSansNarrowRegular.ttf') format('truetype'), url('../fonts/PTSansNarrowRegular.svg#PTSansNarrowRegular') format('svg');
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSansLight.eot');
+    src: url('../fonts/OpenSansLight.eot') format('embedded-opentype'), url('../fonts/OpenSansLight.woff2') format('woff2'), url('../fonts/OpenSansLight.woff') format('woff'), url('../fonts/OpenSansLight.ttf') format('truetype'), url('../fonts/OpenSansLight.svg#OpenSansLight') format('svg');
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 @font-face {
-    font-family: 'PTSansNarrow';
-    src: url('../fonts/PTSansNarrowBold.eot');
-    src: url('../fonts/PTSansNarrowBold.eot') format('embedded-opentype'),
-    url('../fonts/PTSansNarrowBold.woff') format('woff'), 
-    url('../fonts/PTSansNarrowBold.ttf') format('truetype'), 
-    url('../fonts/PTSansNarrowBold.svg#PTSansNarrowBold') format('svg');
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSansRegular.eot');
+    src: url('../fonts/OpenSansRegular.eot') format('embedded-opentype'), url('../fonts/OpenSansRegular.woff2') format('woff2'), url('../fonts/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular.ttf') format('truetype'), url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSansBold.eot');
+    src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'), url('../fonts/OpenSansBold.woff2') format('woff2'), url('../fonts/OpenSansBold.woff') format('woff'), url('../fonts/OpenSansBold.ttf') format('truetype'), url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
     font-style: normal;
     font-weight: 700;
 }
-
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSansSemiBold.eot');
+    src: url('../fonts/OpenSansSemiBold.eot') format('embedded-opentype'), url('../fonts/OpenSansSemiBold.woff2') format('woff2'), url('../fonts/OpenSansSemiBold.woff') format('woff'), url('../fonts/OpenSansSemiBold.ttf') format('truetype'), url('../fonts/OpenSansSemiBold.svg#OpenSansSemiBold') format('svg');
+    font-style: normal;
+    font-weight: 800;
+}
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pink Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<header class="page-header  page-header--color">
+<h2 class="page-header__title  visually-hidden">Pink - взгляните на жизнь иначе!</h2>
+       <nav class="nav-menu nav-menu--pos  nav-menu--color   nav-menu--closed">
+          <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
+            <div class="nav-menu__wrapper">
+                <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a class="nav-menu__menu-link">Pink</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Информация</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Возможности</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Отзывы</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Стоимость</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+      <b class="page-header__title-main">Взгляните на жизнь иначе!</b>
+       <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white" href="#">Скачать приложение</a>
+         <div class="social-list  social-list--pos">
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Apple</a>
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Android</a>
+                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Windows</a>
+                <p>Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+            </div>
+       
+<!--
+        <div class="page-header__logo">
+            <picture>
+               <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
+               <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
+                <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
+            </picture>
+        </div>
+-->
+      
+    </header>
+     <script>
+        var MainNav = document.querySelector ('.nav-menu');
+        var NavButton = document.querySelector ('.nav-menu__header-navigation'); 
+        
+        NavButton.addEventListener('click', function() {
+            if (MainNav.classList.contains('nav-menu--closed')) {
+                MainNav.classList.remove('nav-menu--closed');
+             MainNav.classList.add('nav-menu--opened');
+                }
+            else {
+                MainNav.classList.add('nav-menu--closed');
+                  MainNav.classList.remove('nav-menu--opened');
+                
+            }      
+        });
+    </script>
+    </body>
+
+</html>

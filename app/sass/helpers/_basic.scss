@@ -1,8 +1,11 @@
 body {
     font-size: $font-size-base;
+    @include screen ("tablet", max) {
+        font-size: $font-size-small;
+    }
     font-family: $font-family-base;
     font-weight: $font-weight-base;
-    background-color: $color-slider;
+    background-color: $background-color-main;
     color: $color-base;
     line-height: $line-height-base;
 }
@@ -13,6 +16,7 @@ h3,
 h4,
 h5,
 h6,
+p,
 ul,
 li {
     padding: 0;
@@ -23,60 +27,45 @@ ul {
     list-style: none;
 }
 
-.visually-hidden {
-   position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect (0 0 0 0);
-}
-
 img {
     vertical-align: top;
-//    height: auto;
     max-width: 100%;
 }
 
-//.wrapper {
-//    margin: 0 auto;
-//    width: 320px;
-////    padding-left: 10px;
-////    padding-right: 10px;
-//}
-
 %heading-1 {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 300;
 }
 
 %heading-2 {
     font-size: 24px;
     line-height: 1.125;
-    font-weight: 700;
+    font-weight: 300;
 }
-
-%text {
-    font-size: 20px;
-    line-height: 1.35;
-}
-
-%text-big {
-    font-size: 40px;
-    line-height: 1.5;
-    font-weight: 700;
+%heading-3 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 300;
 }
 
 %text-small {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+%text-big {
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: 700;
 }
 %links {text-decoration: none;
-    color: $color-main;
+    color: $background-color-main;
     font-weight: 700;
+    font-size: $font-size-base;
     
+}
+.visually-hidden {
+	 @include visual-hide;
 }
