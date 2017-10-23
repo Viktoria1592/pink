@@ -1,0 +1,100 @@
+.advantages {
+    @include screen ("tablet", max) {
+        display: none;
+    }
+    padding-top: 14px;
+    padding-bottom: 29px;
+    @include screen ("desktop") {
+        padding-top: 27px;
+        padding-bottom: 67px;
+    }
+    &--color {
+        @include screen ("desktop") {
+            background-color: $color-small;
+        } 
+    }
+//    &__title {
+//        @include visual-hide;
+//    }
+    &__wrapper {
+        @include wrapper;
+         display: flex;
+    }
+    &__logo {
+        background-image: url("../img/icon-timer.svg");
+        background-repeat: no-repeat;
+        position: relative;
+        width: 265px;
+        height: 305px;
+        @include screen ("desktop") {
+            width: 306px;
+            height: 346px;
+        }
+        &::after {
+      @include pseudo;
+      display: block;
+      width: 170px;
+      height: 170px;
+      border: 14px solid $color-text-footer;
+      border-radius: 50%;
+      top: 71px;
+      right: 35px;
+            @include screen ("desktop") {
+                width: 215px;
+                height: 215px;
+            }
+    }
+
+    &::before {
+      content: "24";
+      display: block;
+      font-size: 90px;
+      font-weight: 700;
+      color: $color-text-footer;
+      position: absolute;
+      top: 105px;
+      left: 75px;
+        @include screen ("desktop") {
+            font-size: 120px;
+        }
+    }
+  
+    }
+    &__description {
+        width: 345px;
+        padding-left: 45px;
+        box-sizing: border-box;
+        @include screen ("desktop") {
+            width: 600px;
+            padding-left: 66px;
+        }
+    }
+    &__effect {
+        display: block;
+        @extend %text-big;
+        padding-bottom: 20px;
+        padding-top: 46px;
+        width: 182px;
+        @include screen ("desktop") {
+            padding-top: 93px;
+            width: 319px;
+            
+        }
+    }
+    &__text {
+        @extend %text-small;
+        padding-bottom: 17px;
+        @include screen ("desktop") {
+            padding-bottom: 36px;
+            font-size: 18px;
+        }
+    }
+    &__link-more {
+       font-size: 14px;
+        color: $color-text-footer;
+        @include screen ("desktop") {
+            font-size: 18px;
+        }
+    }
+    
+}

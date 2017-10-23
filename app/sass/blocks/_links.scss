@@ -6,21 +6,29 @@
  
     &--type-block {
         display: block;
+        
+    }
+    &--size {
+        box-sizing: border-box;
+//         margin-bottom: 27px;
+        
         @include screen ("tablet") {
             width: 284px;
+//           margin-bottom: 45px;
         }
         @include screen ("desktop") {
             width: 303px;
+//             margin-bottom: 64px;
         }
-        
     }
-//    &--pos {
-//        
-//        @include screen ("tablet", max) {
-//            margin: 0 20px;  
-//        }
-//       
-//    }
+    &--pos {
+        
+        @include screen ("tablet", max) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+       
+    }
 //    &--color-black {
 //        color: $color-base;
 //        &:active {

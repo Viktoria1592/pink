@@ -1,77 +1,71 @@
 .page-header {
+    padding-bottom: 36px;
     color: $background-color-main;
-    min-height: 728px;
     @include screen ("tablet") {
-//        display: flex;
-//        flex-wrap: wrap;
+        padding-bottom: 115px;
+
     }
         @include screen ("desktop") {
-             min-heigth:855px;
+            padding-bottom: 127px;
             }
     
     &--color {
         background-color: $color-base;
         background-image: url("../img/iphone-hand-mobile@1x.png"),
             url("../img/bg-back-mobile@1x.jpg");
-        background-position: left, center;
+        background-position: 0% 40%, 0% 0%;
         background-repeat: no-repeat;
+//        background-size: auto, 100% 60%;
         
         @include screen ("tablet") {
             background-image: url("../img/iphone-hand-tablet@1x.png"),
             url("../img/bg-back-tablet@1x.jpg");
-            background-size: cover, 100%;
-            background-position: center, center;
+            background-position: 50% 100%, 50% 50%;
+            background-size: auto, auto;
         }
         @include screen ("desktop") {
             background-image: url("../img/iphone-hand-desktop@1x.png"),
             url("../img/bg-back-desktop@1x.jpg");
+            background-position: 60% 100%, 50% 50%;
+            background-size: auto, 100% 100%;
         }
     }
-    &__title-main {
-        @extend %heading-2;
-        @include screen ("tablet") {
-            font-size: 40px;
-    line-height: 1;
-    font-weight: 300;  
-        }
-        @include screen ("desktop") {
-           font-size: 50px; 
-        }
-        
+    &__wrapper {
+        @include wrapper;
     }
-    &__logo {
-        margin: 0 auto;
-        @include screen ("tablet") {
-//            order: 3;
-            min-height: 400px;
-        }
-        @include screen ("desktop") {
-            min-height: 650px;
-        }
-           &--min {
-            @include screen ("tablet") {
-                min-height: 213px;
-            }
-            @include screen ("desktop") {
-                min-height: 310px;
-            }
-        }
-        & img {
-            display: block;
-            margin: 0 auto;
-            min-height: 85px;
-            @include screen ("tablet") {
-                width: 337px;
-                height: 113px;
-                padding-top: 36px;
-            }
-            @include screen ("desktop") {
-                width: 380px;
-                height: 170px;
-                padding-top: 50px;
-            }
-        }
-    }
+//    &__logo {
+//        margin: 0 auto;
+//        @include screen ("tablet") {
+////            order: 3;
+//            min-height: 400px;
+//        }
+//        @include screen ("desktop") {
+//            min-height: 650px;
+//        }
+//           &--min {
+//            @include screen ("tablet") {
+//                min-height: 213px;
+//            }
+//            @include screen ("desktop") {
+//                min-height: 310px;
+//            }
+//        }
+//        & img {
+//            display: block;
+//            margin: 0 auto;
+//            min-height: 85px;
+//            @include screen ("tablet") {
+//                width: 337px;
+//                height: 113px;
+//                padding-top: 36px;
+//            }
+//            @include screen ("desktop") {
+//                width: 380px;
+//                height: 170px;
+//                padding-top: 50px;
+//            }
+//        }
+//    }
 }
 
 

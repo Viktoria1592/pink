@@ -1,0 +1,186 @@
+.reviews {
+    position: relative;
+       padding-top: 50px;
+//    min-height: 300px;
+    @include screen ("tablet", max) {
+    }
+    @include screen ("tablet") {
+        padding-top: 53px;
+//        min-height: 250px;
+    }
+    @include screen ("desktop") {
+        padding-top: 70px;
+//        min-height: 337px;
+    }
+                &::after {
+             @include pseudo;
+               width: 100%;
+             height: 34px;
+             background-image: 
+                 linear-gradient(to top left, transparent 50%, $background-color-main 50%);
+             background-repeat: no-repeat;
+             background-position: 0 0;
+             background-size: 100% 100%;
+            bottom: -34px;
+            left: 0;
+              
+              @include screen ("tablet") {
+                  height: 56px;
+                    bottom: -56px;
+              }
+              @include screen ("desktop") {
+                  height: 85px;
+                    bottom: -85px;
+              }
+    }
+
+        &__description {
+            position: absolute;
+             z-index: 0;
+        opacity: 0;
+        transition: all 0.2s linear;
+            display: flex;
+            flex-direction: column;
+
+    }
+    &__photo {
+        @include screen ("desktop", max) {
+            display: none;
+        }
+        display: block;
+        position: relative;
+//        content: "\201C";
+        font-size: 240px;
+        color: #efefef;
+        width: 89px;
+        height: 70px;
+        margin: 0 auto;
+        order: -2;
+        padding-bottom: 50px;
+        &::after {
+            position: absolute;
+            content: "\201C";
+            top: 0;
+        }
+    }
+       &__client-name {
+       display: block;
+        text-align: center;
+           font-size: 18px;
+           padding-bottom: 25px;
+    
+           @include screen ("tablet") {
+               font-size: 20px;
+               padding-bottom: 10px;
+           }
+           @include screen ("desktop") {
+               font-size: 24px;
+           }
+    }
+    &__client-description {
+        text-align: center;
+    }
+    &__client-description--hidden {
+        @include screen ("tablet", max) {
+            display: none;
+        }
+    }
+        &__client-review {     
+        line-height: 2;
+        text-align: center;
+        padding-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+        @include screen ("tablet") {
+            order: -1;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+        @include screen ("desktop") {
+            padding-left: 130px;
+            padding-right: 130px;
+        }
+        
+    }  
+    
+    &__prew,
+    &__next {
+        font-size: 0;
+            position: absolute;
+            width: 60px;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            top: 0;
+            cursor: pointer;
+            z-index: 300;
+        background-color: transparent;
+        @include screen ("desktop", max) {
+            display: none;
+        }
+    }
+     
+        &__prew {
+            left: 0;
+            &::before {
+                @include pseudo;
+                width: 20px;
+                height: 20px;
+                border-top: 1px solid $color-gray;
+                    border-left: 1px solid $color-gray;
+                transform: rotate(-45deg);
+                
+                left: 60%;
+                
+            }
+        
+            
+        }
+        &__next {
+            right: 0;
+            &::before {
+                @include pseudo;
+                width: 20px;
+                height: 20px;
+                border-top: 1px solid $color-gray;
+                    border-right: 1px solid $color-gray;
+                transform: rotate(45deg);
+                right: 60%;
+            }
+          
+            
+            
+        }
+    &__slider {
+        position: relative;
+        min-height: 300px;
+        @include screen ("tablet") {
+            min-height: 250px;
+        }
+        @include screen ("desktop") {
+            min-height: 337px; 
+        }
+    }
+
+	
+}
+.reviews-slider__control {
+    @include screen ("desktop") {
+        display: none;
+    }
+}
+
+#reviews-slide-1:checked ~ .reviews-slider__control label[for="reviews-slide-1"],
+#reviews-slide-2:checked ~ .reviews-slider__control label[for="reviews-slide-2"],
+#reviews-slide-3:checked ~ .reviews-slider__control label[for="reviews-slide-3"] {
+   background-color: $background-color-main;
+            border-color: $color-base;
+
+}
+
+#reviews-slide-1:checked ~ .slider__block .slider-1,
+#reviews-slide-2:checked ~ .slider__block .slider-2,
+#reviews-slide-3:checked ~ .slider__block .slider-3 {
+    opacity: 1;
+    z-index: 1;
+}

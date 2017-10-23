@@ -128,6 +128,7 @@
 //            }
 //        }
     }
+
 }
 
 .nav-menu--opened .nav-menu__header-navigation::after,
@@ -178,7 +179,6 @@
             text-align: center;
     }
     .nav-menu--opened .nav-menu__wrapper {
-    
 	background-color: $color-base;
         position: absolute;
         left: 0;
@@ -221,4 +221,10 @@
             display: none;
         }
     }
+}
+
+@include screen ("desktop", max) {
+.nav-menu--closed .nav-menu__wrapper {
+    @include wrapper
+}
 }

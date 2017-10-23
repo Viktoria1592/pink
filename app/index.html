@@ -19,18 +19,21 @@
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Возможности</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Отзывы</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Стоимость</a></li>
-                    
                 </ul>
             </div>
         </nav>
-      <b class="page-header__title-main">Взгляните на жизнь иначе!</b>
-       <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white" href="#">Скачать приложение</a>
-         <div class="social-list  social-list--pos">
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Apple</a>
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Android</a>
-                <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Windows</a>
-                <p>Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
-            </div>
+     <div class="page-header__wrapper">
+        <div class="app-information">
+                  <b class="app-information__title-main  app-information__title-main--pos">Взгляните на жизнь иначе!</b>
+               <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white  link-item--pos  link-item--size" href="#">Скачать приложение</a>
+                 <div class="app-list  app-list--pos">
+                        <a class="app-list__item  app-list__item--pos  app-list__item--apple" href="#">Apple</a>
+                        <a class="app-list__item app-list__item--pos   app-list__item--android" href="#">Android</a>
+                        <a class="app-list__item  app-list__item--pos  app-list__item--windows" href="#">Windows</a>
+                    </div>
+                    <p class="app-information__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+           </div>
+      </div>
        
 <!--
         <div class="page-header__logo">
@@ -43,6 +46,100 @@
 -->
       
     </header>
+    <section class="features">
+           <h2 class="features__title">Наши преимущества</h2>
+            <div class="features__description">
+                 <div class="features__wrapper">
+                  <p class="features__slogan">Устали от серости мегаполиса?</p>
+                <p class="features__slogan  features__slogan--small">Нам есть, что вам 
+          предложить!</p>
+            </div>
+        </div>
+            <div class="features__list  features__list--color">
+                <div class="features__block  features__wrapper">
+               <div class="features__photos">
+                     <img class="features__photo  features__photo--hidden" src="img/iphone-screen-1-desktop@1x.png" alt="Фото-1">
+                    <img class="features__photo  features__photo--hidden" src="img/iphone-screen-2-desktop@1x.png" alt="Фото-2">
+                    <picture>
+                      <source media="(min-width:1200px)" srcset="img/iphone-screen-3-desktop@1x.png">
+               <source media="(min-width:700px)" srcset="img/iphone-screen-3-tablet@1x.png">
+                        <img class="features__photo" src="img/iphone-screen-mobile@1x.png" alt="Фото-3">
+                    </picture>
+                </div>
+                <div class="features__points">
+                    <div class="features__item">
+                        <b class="features__item-title">Поднимает настроение Поднимает настроение Поднимает настроение Поднимает настроение</b>
+                        <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!  Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                    </div>
+                    <div class="features__item">
+                        <b class="features__item-title">Меняет мир вокруг</b>
+                        <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                    </div>
+                    <div class="features__item">
+                        <b class="features__item-title">Заводит 
+                    новых друзей</b>
+                        <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <section class="advantages  advantages--color">
+       <h2 class="advantages__title  visually-hidden">Эффект от нашего приложения</h2>
+        <div class="advantages__wrapper">
+            <div class="advantages__logo"></div>
+            <div class="advantages__description">
+                <b class="advantages__effect">Эффект 
+            на 24 часа!
+            </b>
+                <p class="advantages__text">Британские ученые провели исследования
+            и доказали, что положительный эффект
+            от использования приложения длится 
+            целые сутки!
+            </p>
+                <a class="advantages__link-more" href="">Узнать больше об исследовании</a>
+        </div>
+        </div>
+    </section>
+    <section class="reviews  slider">
+                   <div class="slider__wrapper">
+                       <h2 class="reviews__title  visually-hidden">Слайдер преимуществ</h2>
+                       <input class="slider__input" type="radio" name="reviews" id="reviews-slide-1" checked>
+                        <input class="slider__input" type="radio" name="reviews" id="reviews-slide-2">
+                        <input class="slider__input" type="radio" name="reviews" id="reviews-slide-3">
+                        <div class="reviews__slider  slider__block">
+                            <button class="reviews__prew" type="button">Предыдущий отзыв</button>
+                            <button class="reviews__next" type="button">Следующий отзыв</button>
+                            <div class="reviews-slider__item">
+                               
+                                <div class="reviews__description  slider-1">
+                                   <span class="reviews__photo"></span>
+                                    <b class="reviews__client-name">Николай Петров</b>
+                                    <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+                                    <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                </div>
+                                 <div class="reviews__description  slider-2">
+                                   <span class="reviews__photo"></span>
+                                    <b class="reviews__client-name">Николай Козлов</b>
+                                    <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+                                    <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                </div>
+                                 <div class="reviews__description  slider-3">
+                                   <span class="reviews__photo"></span>
+                                    <b class="reviews__client-name">Николай Иванов</b>
+                                    <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+                                    <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                                </div>
+                            </div>
+                       
+                        </div>
+                        <div class="reviews-slider__control  slider__control">
+                            <label class="slider__toggle slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-1"></label>
+                            <label class="slider__toggle slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-2"></label>
+                            <label class="slider__toggle slider__toggle--color-black  slider__toggle--pos" for="reviews-slide-3"></label>
+                        </div>
+                   </div>
+                        </section>
      <script>
         var MainNav = document.querySelector ('.nav-menu');
         var NavButton = document.querySelector ('.nav-menu__header-navigation'); 
