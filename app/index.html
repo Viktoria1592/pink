@@ -14,7 +14,11 @@
             <button class="nav-menu__header-navigation  nav-menu__header-navigation--bg-color  nav-menu__header-navigation--pos" type="button"></button>
             <div class="nav-menu__wrapper">
                 <ul class="nav-menu__menu-list  nav-menu__menu-list--bg-color">
-                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a class="nav-menu__menu-link">Pink</a></li>
+                    <li class="nav-menu__menu-item  nav-menu__menu-item--active  nav-menu__menu-item--border"><a class="nav-menu__menu-link  nav-menu__menu-link--big">
+                        <picture>
+                        <source media="(min-width:1200px)" srcset="img/logo-pink-white-desktop.svg">
+                        <source media="(min-width:700px)" srcset="img/logo-pink-white-tablet.svg"> <img class="features__photo" src="img/logo-pink-white-mobile.svg" alt="Логотип"> </picture>
+                    </a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Информация</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Возможности</a></li>
                     <li class="nav-menu__menu-item  nav-menu__menu-item--border"><a href="#" class="nav-menu__menu-link">Отзывы</a></li>
@@ -23,20 +27,11 @@
             </div>
         </nav>
         <div class="page-header__wrapper">
-            <div class="app-information"> <b class="app-information__title-main  app-information__title-main--pos">Взгляните на жизнь иначе!</b> <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white  link-item--pos  link-item--size" href="#">Скачать приложение</a>
+            <div class="app-information"> <b class="app-information__title-main  app-information__title-main--pos">Взгляните на жизнь иначе! Взгляните на жизнь иначе! Взгляните на жизнь иначе!</b> <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white  link-item--pos  link-item--size" href="#">Скачать приложение</a>
                 <div class="app-list  app-list--pos"> <a class="app-list__item  app-list__item--pos  app-list__item--apple" href="#">Apple</a> <a class="app-list__item app-list__item--pos   app-list__item--android" href="#">Android</a> <a class="app-list__item  app-list__item--pos  app-list__item--windows" href="#">Windows</a> </div>
                 <p class="app-information__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
             </div>
         </div>
-        <!--
-        <div class="page-header__logo">
-            <picture>
-               <source media="(min-width:1200px)" srcset="img/logotype-desktop.svg">
-               <source media="(min-width:768px)" srcset="img/logotype-tablet.svg">
-                <img src="img/logotype-mobile.svg" width="230" height="40" alt="Логотип">
-            </picture>
-        </div>
--->
     </header>
     <section class="features">
         <h2 class="features__title">Наши преимущества</h2>
@@ -158,9 +153,22 @@
                 <img src="img/bg-map-mobile.jpg" alt="Логотип">
             </picture>
         </div>
-        <div class="page-footer__links  page-footer__wrapper"> <a class="page-footer__logotype" href="">Pink</a>
-            <div class="social-list  social-list--pos"> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--vk" href="#">Твитер</a> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a> <a class="social-list__item  social-list__item--pos  social-list__item--border-gray  social-list__item--active-black  social-list__item--inst" href="#">Инстаграм</a> </div>
-            <div class="page-footer__development"> Website by <span class="page-footer__developer"></span> for <span class="page-footer__buy"></span> </div>
+        <div class="page-footer__links  page-footer__wrapper"> 
+           <div class="page-footer__logotype">
+              <picture>
+               <source media="(min-width:1200px)" srcset="img/logo-pink-blue-desktop.svg">
+                <img src="img/logo-pink-blue-mobile.svg" alt="Логотип">
+            </picture>
+           </div>
+            <div class="social-list"> 
+            <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--tw" href="#">Твитер</a> 
+            <a class="social-list__item    social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a> 
+            <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--ut" href="#">Ютуб</a> 
+            </div>
+            <div class="page-footer__development">  
+            <span class="page-footer__developer">Website by</span> 
+             <span class="page-footer__buy">for</span>
+              </div>
         </div>
     </footer>
     <script>

@@ -36,13 +36,11 @@
     }
     &__contacts {
     
-//        display: flex;
+
         font-size: 18px;
         font-weight: 700;
         position: relative;
-//        @include screen ("tablet", max) {
-//            flex-direction: column;
-//        }
+
                &::after {
           
              @include pseudo;
@@ -67,8 +65,7 @@
          }
     
         span {
-//            font-size: 18px;
-//            font-weight: 700;
+
             display: block;
             text-align: center;
         }
@@ -92,6 +89,16 @@
        text-decoration: none;
         font-size: 24px;
         font-weight: 300;
+        transition: 0.3s linear;
+        
+        &:hover {
+            text-decoration: underline;
+            color: $color-base;
+        }
+        &:active {
+            text-decoration: none;
+            color: $color-gray;
+        }
         
     }
     &__email--color-pink {
@@ -151,6 +158,62 @@
             display: none;
         }
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include screen ("tablet") {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        @include screen ("desktop") {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+    &__logotype {
+        img {
+            width: 150px;
+            height: 45px;
+        }
+     
+       
+    }
+    &__development {
+        font-size: 14px;
+        padding-top: 20px;
+        @include screen ("desktop") {
+            font-size: 18px;
+        }
+        
+    }
+    &__developer {
+        position: relative;
+        
+        padding-right: 54px;
+        &::after {
+            @include pseudo;
+            background-image: url("../../img/icon-htmlacademy.svg");
+            width: 27px;
+            height: 31px;
+            background-repeat: no-repeat;
+            top: -5px;
+            right: 15px;
+            
+        }
+    }
+     &__buy {
+        position: relative;
+       
+        padding-right: 43px;
+        &::after {
+            @include pseudo;
+            background-image: url("../../img/icon-htmlacademy.svg");
+            width: 28px;
+            height: 37px;
+            background-repeat: no-repeat;
+            top: -5px;
+            right: 0;
+            
+        }
     }
 	
 }

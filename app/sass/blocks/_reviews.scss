@@ -49,7 +49,7 @@
         }
         display: block;
         position: relative;
-//        content: "\201C";
+
         font-size: 240px;
         color: #efefef;
         width: 89px;
@@ -58,8 +58,11 @@
         order: -2;
         padding-bottom: 50px;
         &::after {
-            position: absolute;
-            content: "\201C";
+           @include pseudo;
+            background-image: url(../../img/icon-quotes.svg);
+            background-repeat: no-repeat;
+            width: 89px;
+        height: 70px;
             top: 0;
         }
     }

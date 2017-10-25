@@ -33,39 +33,7 @@
     &__wrapper {
         @include wrapper;
     }
-//    &__logo {
-//        margin: 0 auto;
-//        @include screen ("tablet") {
-////            order: 3;
-//            min-height: 400px;
-//        }
-//        @include screen ("desktop") {
-//            min-height: 650px;
-//        }
-//           &--min {
-//            @include screen ("tablet") {
-//                min-height: 213px;
-//            }
-//            @include screen ("desktop") {
-//                min-height: 310px;
-//            }
-//        }
-//        & img {
-//            display: block;
-//            margin: 0 auto;
-//            min-height: 85px;
-//            @include screen ("tablet") {
-//                width: 337px;
-//                height: 113px;
-//                padding-top: 36px;
-//            }
-//            @include screen ("desktop") {
-//                width: 380px;
-//                height: 170px;
-//                padding-top: 50px;
-//            }
-//        }
-//    }
+
 }
 
 

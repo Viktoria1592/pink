@@ -1,171 +1,59 @@
 .social-list {
     font-size: 0;
-    @media (min-width:768px) and (max-width:1199px) {
-        width: 100%;
-    }
-    
-    &--pos {
-        @include screen ("tablet", max) {
-        margin-top: 25px;
-        margin-bottom: 33px;
-        }
-        @media (min-width:768px) and (max-width:1199px) {
-            order: 2;
-            margin-top: 45px;
-        }
-        @include screen ("desktop") {
-            padding-top: 53px;
-            
-        }
-    }
-    
     &__item {
         display: inline-block;
-        @media (min-width:768px) and (max-width:1199px) {
-            width: 33.333%;
-            box-sizing: border-box;
-        }
-        @include screen ("desktop") {
-            width: 50px;
-            height: 50px;
-            margin-right: 6px;
-        }
-        
-        &:active::before {
-           opacity: 0.3; 
-        }
+        margin-right: 12px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        position: relative;
         
         &--border-gray {
-            
-        border: 1px solid #3e3e3e;
-            
-        &:hover {
-            border-color: #515151;
-        }
-    }
-    
-    &--active-black {
-        
-        &:active {
-        background-color: #252525;
-            border: 1px solid #252525;
-        }
-    }
-        &--pos {
-            position: relative;
-            @include screen ("desktop", max) {
-                height: 100px;
+            border: 2px solid #e9ebec;
+            transition: 0.3s linear;
+            &:hover {
+                border-color: $color-base;
+            }
+            &:active {
+                border-color: #e9ebec;
             }
         }
         &::before {
             @include pseudo;
-            top: 40%;
-            left: 35%;
-            background: url("../img/sprites.png") no-repeat;
-            
+            background-repeat: no-repeat;
+             left: 40%;
+            top: 32%;
+            transition: 0.3s linear;
         }
-        @include screen ("tablet", max) {
-        &--vk {
-            width: 108px;
-            
-            &::before {
-                background-position: -15px -14px;
-                width: 23px;
-                height: 26px;
-                left: 40%;
-                top: 45%;
-            }
+        &:active::before {
+           opacity: 0.3; 
         }
-        &--fb {
-            width: 98px;
-            
-            &::before {
-                background-position: -18px -106px;
-                width: 18px;
-                height: 39px;
-                left: 40%;
-            }
-        }
-        &--inst {
-            width: 108px;
-            
-            &::before {
-                background-position: 0px -57px;
-                width: 36px;
-                height: 36px;
-            }
-        }
-        }
-          @media (min-width:768px) and (max-width:1199px) {
-        &--vk {    
-            &::before {
-                background-position: -15px -14px;
-                width: 23px;
-                height: 26px;
-                left: 40%;
-                top: 45%;
-            }
-        }
-        &--fb {
-            
-            &::before {
-                background-position: -18px -106px;
-                width: 18px;
-                height: 39px;
-                left: 40%;
-            }
-        }
-        &--inst {
-            
-            &::before {
-                background-position: 0px -57px;
-                width: 36px;
-                height: 36px;
-            }
-        }
-        }
-        @include screen ("desktop") {
-        &--vk {
-            
-            &::before {
-                background-position: -15px -259px;
-                width: 15px;
-                height: 17px;
-                left: 40%;
-            }
-        }
-        &--fb {
-            
-            &::before {
-                background-position: -17px -328px;
-                width: 10px;
-                height: 31px;
-                left: 40%;
-            }
-        }
-        &--inst {
-            
-            &::before {
-                background-position: -15px -293px;
-                width: 19px;
-                height: 19px;
-            }
-        }
-        }
-        
     }
-    &__slogan {
-        @include screen ("desktop") {
-            font-size: 18px;
-    font-weight: 400;
-    color: $color-main;
-    line-height: 1.5;
-            padding-bottom: 18px;
-            display: block;
-            text-align: center;
+    
+    &__item--tw {
+    
+        &::before {
+            background-image: url("../img/icon-twitter.svg");
+            width: 20px;
+            height: 20px;
+          
+        }
+    }
+    
+    &__item--fb {
+        &::before {
+            background-image: url("../img/icon-facebook.svg");
+            width: 15px;
+            height: 20px;
+           
+        }
+    }
+    
+    &__item--ut {
+        &::before {
+            background-image: url("../img/icon-youtube.svg");
+            width: 20px;
+            height: 20px;
         }
     }
 }
- 
-
-   
