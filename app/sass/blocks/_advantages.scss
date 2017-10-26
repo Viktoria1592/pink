@@ -13,9 +13,7 @@
             background-color: $color-small;
         } 
     }
-//    &__title {
-//        @include visual-hide;
-//    }
+
     &__wrapper {
         @include wrapper;
          display: flex;

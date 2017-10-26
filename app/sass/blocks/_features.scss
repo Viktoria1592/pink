@@ -1,5 +1,4 @@
 .features {
-    
     &__wrapper {
         @include wrapper;
     }
@@ -15,29 +14,26 @@
         @include screen ("desktop") {
             padding-top: 75px;
         }
-                  &::after {
-             @include pseudo;
-               width: 100%;
-             height: 34px;
-             background-image: 
-                 linear-gradient(to top left, transparent 50%, $background-color-main 50%);
-             background-repeat: no-repeat;
-             background-position: 0 0;
-             background-size: 100% 100%;
+        &::after {
+            @include pseudo;
+            width: 100%;
+            height: 34px;
+            background-image: linear-gradient(to top left, transparent 50%, $background-color-main 50%);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 100% 100%;
             bottom: -34px;
             left: 0;
-              
-              @include screen ("tablet") {
-                  height: 56px;
-                    bottom: -56px;
-              }
-              @include screen ("desktop") {
-                  height: 85px;
-                    bottom: -85px;
-              }
+            @include screen ("tablet") {
+                height: 56px;
+                bottom: -56px;
+            }
+            @include screen ("desktop") {
+                height: 85px;
+                bottom: -85px;
+            }
+        }
     }
-    }
-  
     &__slogan {
         @extend %heading-2;
         text-align: center;
@@ -84,9 +80,8 @@
         width: 157px;
         height: 277px;
         @include screen ("tablet") {
-        
-        width: 268px;
-        height: 481px;
+            width: 268px;
+            height: 481px;
         }
         @include screen ("desktop") {
             width: 286px;
@@ -98,7 +93,6 @@
             display: none;
         }
     }
-   
     &__list {
         @include screen ("tablet", max) {
             text-align: center;
@@ -130,7 +124,7 @@
             padding-bottom: 45px;
         }
         @include screen ("desktop") {
-        text-align: center;
+            text-align: center;
             padding-left: 30px;
             padding-right: 30px;
             width: 30%;
@@ -138,15 +132,15 @@
             flex-direction: column;
         }
     }
-     &__item-title {
-         display: block;
+    &__item-title {
+        display: block;
         font-size: 18px;
         font-weight: 700;
-         padding-bottom: 20px;
-         @include screen ("desktop") {
+        padding-bottom: 20px;
+        @include screen ("desktop") {
             font-size: 30px;
-             padding-bottom: 30px;
-             flex-grow: 1;
+            padding-bottom: 30px;
+            flex-grow: 1;
         }
     }
     &__item-text {
