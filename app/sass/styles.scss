@@ -1,26 +1,8 @@
-//@import 'helpers/normalize';
-//@import 'helpers/fonts';
-//@import 'helpers/variables';
-//@import 'helpers/mixin';
-//@import 'helpers/basic';
-//@import 'blocks/page-header';
-//@import 'blocks/nav-menu';
-//@import 'blocks/app-information';
-//@import 'blocks/app-list';
-//@import 'blocks/features';
-//@import 'blocks/advantages';
-//@import 'blocks/reviews';
-//@import 'blocks/slider';
-//@import 'blocks/prices-tarifs';
-//@import 'blocks/page-footer';
-//@import 'blocks/social-list';
-//@import 'blocks/links';
-
 @import 'helpers/normalize';
 @import 'helpers/fonts';
 @import 'helpers/variables';
 @import 'helpers/mixin';
+@import 'helpers/fonts';
+@import 'helpers/normalize';
 @import 'helpers/basic';
-@import 'blocks/*';
-
-
+@import 'blocks/**/*';
