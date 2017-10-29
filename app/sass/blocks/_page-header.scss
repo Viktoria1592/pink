@@ -15,7 +15,6 @@
             url("../img/bg-back-mobile@1x.jpg");
         background-position: 0% 40%, 0% 0%;
         background-repeat: no-repeat;
-//        background-size: auto, 100% 60%;
         
         @include screen ("tablet") {
             background-image: url("../img/iphone-hand-tablet@1x.png"),

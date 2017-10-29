@@ -33,7 +33,7 @@
     &__item--tw {
     
         &::before {
-            background-image: url("../img/icon-twitter.svg");
+            background-image: url("../img/icons/icon-twitter.svg");
             width: 20px;
             height: 20px;
           
@@ -42,7 +42,7 @@
     
     &__item--fb {
         &::before {
-            background-image: url("../img/icon-facebook.svg");
+            background-image: url("../img/icons/icon-facebook.svg");
             width: 15px;
             height: 20px;
            
@@ -51,7 +51,7 @@
     
     &__item--ut {
         &::before {
-            background-image: url("../img/icon-youtube.svg");
+            background-image: url("../img/icons/icon-youtube.svg");
             width: 20px;
             height: 20px;
         }

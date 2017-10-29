@@ -2,10 +2,10 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var cssnano = require('gulp-cssnano');
 var browserSync = require('browser-sync');
-var autoprefixer = require('gulp-autoprefixer');
+//var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var bulkSass = require('gulp-sass-bulk-import');
-var image = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
@@ -14,7 +14,7 @@ var rigger = require('gulp-rigger');
 var mqpacker = require('css-mqpacker');
 var postcss = require("gulp-postcss");
 var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
+//var svgmin = require('gulp-svgmin');
 var cache = require('gulp-cache')
 
 
@@ -53,18 +53,20 @@ gulp.task('sass', function () { // Создаем таск "sass"
 
 gulp.task('image', function () {
     return gulp.src('app/img/**/*')
-        .pipe(image([
-    image.gifsicle({
+        .pipe(imagemin([
+    imagemin.gifsicle({
             interlaced: true
         })
     , 
-        image.jpegtran({
+        imagemin.jpegtran({
             progressive: true
         })
     , 
-        image.optipng({
+        imagemin.optipng({
             optimizationLevel: 3
         })
+        ,
+        imagemin.svgo
 ]))
         .pipe(gulp.dest('build/img'))
         .pipe(browserSync.reload({
@@ -92,7 +94,22 @@ gulp.task('scripts', function () {
 
 gulp.task('symbols', function () {
     return gulp.src('app/icons/*.svg')
-        .pipe(svgmin())
+       .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [
+          { optimizationLevel: 3 },
+          { progessive: true },
+          { interlaced: true },
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: true },
+          { cleanupIDs: false },
+          { cleanupAttrs: true },
+          { removeMetadata: true },
+          { removeTitle: true },
+          { removeAttrs: { attrs: '(fill|stroke|data-name)' } },
+        ],
+      }),
+    ]))
         .pipe(svgstore({
         inlineSvg: true
     }))

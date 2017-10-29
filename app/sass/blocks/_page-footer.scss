@@ -191,7 +191,7 @@
         padding-right: 54px;
         &::after {
             @include pseudo;
-            background-image: url("../../img/icon-htmlacademy.svg");
+            background-image: url("../../img/icons/icon-htmlacademy.svg");
             width: 27px;
             height: 31px;
             background-repeat: no-repeat;
@@ -206,7 +206,7 @@
         padding-right: 43px;
         &::after {
             @include pseudo;
-            background-image: url("../../img/icon-htmlacademy.svg");
+            background-image: url("../../img/icons/icon-htmlacademy.svg");
             width: 28px;
             height: 37px;
             background-repeat: no-repeat;

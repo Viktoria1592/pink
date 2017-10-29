@@ -44,27 +44,24 @@
         &--apple {
             
             &::before {
-                background: url("../img/icon-apple.svg") no-repeat;
+                background: url("../img/icons/icon-apple.svg") no-repeat;
               
-//                left: 40%;
-//                top: 45%;
             }
         }
         &--android {
             height: 48px;
             
             &::before {
-                background: url("../img/icon-android.svg") no-repeat;
+                background: url("../img//icons/icon-android.svg") no-repeat;
                 height: 48px;
              
-//                left: 40%;
             }
         }
         &--windows {
             height: 45px;
             
             &::before {
-                background: url("../img/icon-microsoft.svg") no-repeat;
+                background: url("../img//icons/icon-microsoft.svg") no-repeat;
                 height: 45px;
 
             }
