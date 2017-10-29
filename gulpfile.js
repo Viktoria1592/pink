@@ -59,7 +59,11 @@ gulp.task('image', function () {
             optimizationLevel: 3
         })
         ,
-        imagemin.svgo
+        imagemin.svgo({
+            plugins: [
+                {removeViewBox: false}
+            ]
+        })
 ]))
         .pipe(gulp.dest('build/img'))
         .pipe(browserSync.reload({
