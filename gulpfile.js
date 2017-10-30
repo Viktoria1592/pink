@@ -15,6 +15,9 @@ var postcss = require("gulp-postcss");
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var cache = require('gulp-cache');
+var spritesmith = require('gulp.spritesmith');
+var ghpages = require('gulp-gh-pages');
+var gulpStylelint = require('gulp-stylelint')
 
 gulp.task('html', function() {
   gulp.src('app/*.html') //Выберем файлы по нужному пути
@@ -45,7 +48,7 @@ gulp.task('sass', function() { // Создаем таск "sass"
 
 
 gulp.task('image', function () {
-    return gulp.src('app/img/**/*')
+    return gulp.src(['app/img/**/*', '!app/img/sprite/**/*', '!app/img/sprite' ])
         .pipe(imagemin([
     imagemin.gifsicle({
             interlaced: true
@@ -108,12 +111,49 @@ gulp.task('symbols', function () {
       }),
     ]))
         .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename('sprite.svg'))
+    .pipe(rename('svg-sprite.svg'))
     .pipe(gulp.dest('build/img'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('app/img/sprite/*')
+  .pipe(spritesmith({
+    imgName: 'png-sprite.png',
+    cssName: 'png-sprite.css',
+      algorithm: 'binary-tree',
+      padding: 2
+  }));
+  spriteData.img.pipe(gulp.dest('build/img'));
+    spriteData.css.pipe(gulp.dest('build/css')); 
+});
+
+gulp.task('ghpages', function ()  {
+  gulp.src('build/**/*')
+    .pipe(ghpages([{options : Object}]))
+});
+
+//gulp.task('lint-css', function () {
+// 
+//  return gulp.src('build/css')
+//    .pipe(gulpStylelint({reporters: [
+//        {formatter: 'string', console: true}
+//      ]
+//    }));
+//});
+
+gulp.task('lint', function () {
+  gulp.src('app/sass/**/*.scss')
+    .pipe(postcss([
+      gulpStylelint(),
+      require('postcss-reporter')({
+        clearAllMessages: true,
+      }),
+    ], { syntax: require('postcss-scss') }))
+});
+
 
 
 gulp.task('clean', function() {
@@ -122,8 +162,12 @@ gulp.task('clean', function() {
 
 
 gulp.task('build', function(fn) {
-  run('clean', 'html', 'sass', 'scripts', 'symbols', 'fonts', 'image', fn)
+  run('clean', 'html', 'sass', 'scripts', 'symbols', 'sprite', 'fonts', 'image', fn)
 });
+
+gulp.task('deploy', function ()  {
+  run('build', 'ghpages')
+    });
 
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
