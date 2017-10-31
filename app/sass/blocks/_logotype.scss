@@ -1,0 +1,21 @@
+.logotype {
+
+  &__letter {
+    display: none;
+  }
+  &__glasses {
+    display: none;
+    @include screen ("tablet") {
+      display: inline;
+    }
+  }
+  &__glasses-color {
+    display: none;
+
+  }
+  &__dotted {
+    display: none;
+
+  }
+
+}

@@ -1,56 +1,44 @@
 .slider {
   &__wrapper {
-        @include wrapper;
+    @include wrapper;
+  }
+  &__block {
+    position: relative;
+  }
+  &__input {
+    display: none;
+  }
+  &__control {
+    position: absolute;
+    bottom: 36px;
+    left: 40%;
+    z-index: 100;
+    @include screen ("tablet") {
+      bottom: 20px;
+      left: 45%;
     }
-    &__block {position: relative;
-        
+  }
+  &__toggle {
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &--color-black {
+      background-color: $color-gray;
+      border-radius: 50%;
+      border: 3px solid $background-color-main;
+      transition: 0.3s linear;
+      &:hover {
+        background-color: #7e868f;
+      }
+      &:active {
+        opacity: 0.1;
+        background-color: $color-base;
+      }
     }
-     &__input {
-        display: none;
+    &--pos {
+      margin-right: 15px;
     }
-    
-    &__control {
-        position: absolute;
-        bottom: 36px;
-       left: 40%;
-        z-index: 100;
-        @include screen ("tablet") {
-            bottom: 20px;
-          left: 45%;
-    }
-    }
-    &__toggle {
-        width: 6px;
-        height: 6px;
-        display: inline-block;
-        cursor: pointer;
-        transition: all 0.3s linear;
-        
-  
-        
-        &--color-black {
-            background-color: $color-gray;
-            border-radius: 50%;
-           border: 3px solid $background-color-main;
-            transition: 0.3s linear;
-            
-            
-       
-            &:hover
-             {
-            background-color: #7e868f;
-           
-        }
-            &:active
-             {
-                 opacity: 0.1;
-            background-color: $color-base;
-           
-        }
-        }
-       &--pos {
-            margin-right: 15px;
-        } 
-    
-}
+  }
 }

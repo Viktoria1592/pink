@@ -1,132 +1,125 @@
 .prices-tarifs {
-    padding-top: 90px;
-    padding-bottom: 100px;
+  padding-top: 90px;
+  padding-bottom: 100px;
+  @include screen ("tablet") {
+    padding-bottom: 66px;
+  }
+  @include screen ("desktop") {
+    padding-top: 147px;
+    padding-bottom: 97px;
+  }
+  &--color {
+    background-color: $color-small;
+  }
+  &__wrapper {
+    @include wrapper;
+  }
+  &__list {
+    border-collapse: collapse;
     @include screen ("tablet") {
-        padding-bottom: 66px;
+      width: 100%;
+      font-size: 14px;
     }
     @include screen ("desktop") {
-        padding-top: 147px;
-        padding-bottom: 97px;
+      font-size: 18px;
     }
-    &--color {
-        background-color: $color-small;
+  }
+  &__description {
+    position: relative;
+    background-color: $background-color-main;
+    border: 1px solid #e5e5e5;
+    @include screen ("tablet") {
+      padding: 15px;
+      width: 25%;
+      box-sizing: border-box;
     }
-    &__wrapper {
-        @include wrapper;
+    @include screen ("desktop") {
+      padding: 18px;
     }
-    &__list {
-        border-collapse: collapse;
-        @include screen ("tablet") {
-            width: 100%;
-            font-size: 14px;
-        }
-        @include screen ("desktop") {
-            font-size: 18px;
-        }
-
+  }
+  &__description--color {
+    background-color: $color-base;
+  }
+  &__description--color-none {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+  }
+  &__description--best {
+    &::after {
+      position: absolute;
+      content: "Хит";
+      text-transform: uppercase;
+      color: $background-color-main;
+      border-bottom: 30px solid $color-text-footer;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      height: 0;
+      width: 28px;
+      transform: rotate(-45deg);
+      z-index: 100;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 800;
+      top: 5px;
+      left: -25px;
     }
-    &__description {
-        position: relative;
-        
-        background-color: $background-color-main;
-       border: 1px solid  #e5e5e5;
-        @include screen ("tablet") {
-            padding: 15px;
-            width: 25%;
-            box-sizing: border-box;
-        }
-        @include screen ("desktop") {
-            padding: 18px;
-        }
-        
+  }
+  &__description--red {
+    &::after,
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 1px;
+      background-color: $color-text-footer;
+      top: 50%;
+      left: 50%;
     }
-    &__description--color {
-        background-color: $color-base;
+    &::before {
+      transform: rotate(45deg);
     }
-    &__description--color-none {
-        background-color: transparent;
-        border-top: none;
-        border-left: none;
+    &::after {
+      transform: rotate(-45deg);
     }
-    &__description--best {
-       
-        &::after {
-            position: absolute;
-            content: "Хит";
-            text-transform: uppercase;
-            color: $background-color-main;
-            border-bottom: 30px solid $color-text-footer;
-	border-left: 30px solid transparent;
-	border-right: 30px solid transparent;
-	height: 0;
-	width: 28px;
-            transform: rotate(-45deg);
-            z-index: 100;
-            font-size: 14px;
-            text-align: center;
-            font-weight: 800;
-            top: 5px;
-            left: -25px;
-        }
+  }
+  &__description--green {
+    &::after {
+      @include pseudo;
+      width: 15px;
+      height: 10px;
+      border: 1px solid #3dc644;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      top: 50%;
+      left: 50%;
     }
-    &__description--red {
-        &::after,
-        &::before {
-            @include pseudo;
-            width: 20px;
-            height: 1px;
-            background-color: $color-text-footer;
-            top: 50%;
-            left: 50%;
-            
-        }
-        &::before {
-            transform: rotate(45deg);
-        }
-        &::after {
-            transform: rotate(-45deg);
-        }
+  }
+  &__name {
+    display: block;
+    text-align: center;
+    @include screen ("tablet") {
+      font-size: 16px;
+      color: $background-color-main;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-bottom: 10px;
     }
-    
-    &__description--green {
-        &::after {
-            @include pseudo;
-            width: 15px;
-            height: 10px;
-            border: 1px solid #3dc644;
-            border-top: none;
-            border-right: none;
-            transform: rotate(-45deg);
-            top: 50%;
-            left: 50%;
-        }
+    @include screen ("desktop") {
+      font-size: 18px;
     }
-    &__name {
-        display: block;
-        text-align: center;
-        @include screen ("tablet") {
-            font-size: 16px;
-            color: $background-color-main;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding-bottom: 10px;
-        }
-        @include screen ("desktop") {
-            font-size: 18px;
-        }
-        
+  }
+  &__cost {
+    display: block;
+    text-align: center;
+    @include screen ("tablet") {
+      font-size: 18px;
+      color: $background-color-main;
+      font-weight: 300;
+      text-transform: uppercase;
     }
-    &__cost {
-        display: block;
-        text-align: center;
-        @include screen ("tablet") {
-            font-size: 18px;
-            color: $background-color-main;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-        @include screen ("desktop") {
-            font-size: 24px;
-        }
+    @include screen ("desktop") {
+      font-size: 24px;
     }
+  }
 }

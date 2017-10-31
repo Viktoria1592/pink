@@ -1,57 +1,40 @@
 .link-item {
-    @extend %links;
-    text-align: center;
-    transition: 0.3s linear;
-   
-    
- 
-    &--type-block {
-        display: block;
-        
+  @extend %links;
+  text-align: center;
+  transition: 0.3s linear;
+  &--type-block {
+    display: block;
+  }
+  &--size {
+    box-sizing: border-box;
+    @include screen ("tablet") {
+      width: 284px;
     }
-    &--size {
-        box-sizing: border-box;
-
-        
-        @include screen ("tablet") {
-            width: 284px;
-
-        }
-        @include screen ("desktop") {
-            width: 303px;
-
-        }
+    @include screen ("desktop") {
+      width: 303px;
     }
-    &--pos {
-        
-        @include screen ("tablet", max) {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-       
+  }
+  &--pos {
+    @include screen ("tablet", max) {
+      margin-left: 20px;
+      margin-right: 20px;
     }
-
-    &--color-white {
-        color: $background-color-main;
-        &:hover {
-            background-color: $background-color-main;
-            color: $color-text-footer;
-        }
-        
-        &:active {
-            color: rgba(210, 40, 86, 0.3);
-          
-        }
+  }
+  &--color-white {
+    color: $background-color-main;
+    &:hover {
+      background-color: $background-color-main;
+      color: $color-text-footer;
     }
-
-     &--size-small {
-         padding: 12px 30px;
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
     }
-    &--border-white {
-        border: 3px solid $background-color-main;
-        border-radius: 25px;
-
-    }
-
-
+  }
+  &--size-small {
+    padding: 12px 30px;
+  }
+  &--border-white {
+    border: 3px solid $background-color-main;
+    border-radius: 25px;
+  }
 }

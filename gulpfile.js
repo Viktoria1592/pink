@@ -17,7 +17,7 @@ var svgmin = require('gulp-svgmin');
 var cache = require('gulp-cache');
 var spritesmith = require('gulp.spritesmith');
 var ghpages = require('gulp-gh-pages');
-var gulpStylelint = require('gulp-stylelint')
+var stylelint = require('stylelint')
 
 gulp.task('html', function() {
   gulp.src('app/*.html') //Выберем файлы по нужному пути
@@ -53,11 +53,11 @@ gulp.task('image', function () {
     imagemin.gifsicle({
             interlaced: true
         })
-    , 
+    ,
         imagemin.jpegtran({
             progressive: true
         })
-    , 
+    ,
         imagemin.optipng({
             optimizationLevel: 3
         })
@@ -101,12 +101,12 @@ gulp.task('symbols', function () {
           { progessive: true },
           { interlaced: true },
           { removeViewBox: false },
-          { removeUselessStrokeAndFill: true },
+//          { removeUselessStrokeAndFill: true },
           { cleanupIDs: false },
           { cleanupAttrs: true },
           { removeMetadata: true },
           { removeTitle: true },
-          { removeAttrs: { attrs: '(fill|stroke|data-name)' } },
+//          { removeAttrs: { attrs: '(fill|stroke|data-name)' } },
         ],
       }),
     ]))
@@ -127,7 +127,7 @@ gulp.task('sprite', function () {
       padding: 2
   }));
   spriteData.img.pipe(gulp.dest('build/img'));
-    spriteData.css.pipe(gulp.dest('build/css')); 
+    spriteData.css.pipe(gulp.dest('build/css'));
 });
 
 gulp.task('ghpages', function ()  {
@@ -135,19 +135,11 @@ gulp.task('ghpages', function ()  {
     .pipe(ghpages([{options : Object}]))
 });
 
-//gulp.task('lint-css', function () {
-// 
-//  return gulp.src('build/css')
-//    .pipe(gulpStylelint({reporters: [
-//        {formatter: 'string', console: true}
-//      ]
-//    }));
-//});
 
 gulp.task('lint', function () {
   gulp.src('app/sass/**/*.scss')
     .pipe(postcss([
-      gulpStylelint(),
+      stylelint(),
       require('postcss-reporter')({
         clearAllMessages: true,
       }),

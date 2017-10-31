@@ -8,36 +8,30 @@ div::after {
 
 @mixin triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
   @include pseudo($pos: $position);
-
   width: 0;
   height: 0;
-
   @if $round {
     border-radius: 3px;
   }
-
-  @if $direction == down {
+  @if $direction==down {
     border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-top: $size solid $color;
     margin-top: 0 - round($size / 2.5);
   }
-
-  @else if $direction == up {
+  @else if $direction==up {
     border-left: $size solid transparent;
     border-right: $size solid transparent;
     border-bottom: $size solid $color;
     margin-bottom: 0 - round($size / 2.5);
   }
-
-  @else if $direction == right {
+  @else if $direction==right {
     border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-left: $size solid $color;
     margin-right: -$size;
   }
-
-  @else if  $direction == left {
+  @else if $direction==left {
     border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-right: $size solid $color;
@@ -45,17 +39,17 @@ div::after {
   }
 }
 
-
 @mixin wrapper {
-    margin: 0 auto;
-    width: 320px;
-    @media (min-width: 700px) and (max-width:1199px) {
-            width: 620px;
-        }
-        @media (min-width:1200px) {
-            width: 940px;
+  margin: 0 auto;
+  width: 320px;
+  @media (min-width: 700px) and (max-width: 1199px) {
+    width: 620px;
+  }
+  @media (min-width:1200px) {
+    width: 940px;
+  }
 }
-}
+
 
 /*
 Миксин для базовых параметров псевдоэлементов.
@@ -67,11 +61,13 @@ div::after {
   width: 150px;
 }
 */
+
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
 }
+
 
 /*
 Миксин для медиа-запросов
@@ -85,30 +81,20 @@ div {
   }
 }
 */
-$breakpoints: (
-  'phone': 320px,
-  'phone-wide': 480px,
-  'phablet': 560px,
-  'tablet-small': 640px,
-  'tablet': 700px,
-  'tablet-wide': 1024px,
-  'desktop': 1200px,
-  'desktop-wide': 1440px
-);
 
+$breakpoints: ( 'phone': 320px, 'phone-wide': 480px, 'phablet': 560px, 'tablet-small': 640px, 'tablet': 700px, 'tablet-wide': 1024px, 'desktop': 1200px, 'desktop-wide': 1440px);
 @mixin screen($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
-
-    @if $type == max {
+    @if $type==max {
       $width: $width - 1px;
     }
-
     @media only screen and (#{$type}-width: $width) {
       @content;
     }
   }
 }
+
 
 /*
 Миксин для быстрого добавления clearfix.
@@ -117,8 +103,8 @@ $breakpoints: (
   @include clearfix;
 }
 */
-@mixin clearfix {
 
+@mixin clearfix {
   &::after {
     content: '';
     display: table;
@@ -135,6 +121,7 @@ div {
   @include visual-hide;
 }
 */
+
 @mixin visual-hide() {
   margin: 0;
   padding: 0;
@@ -145,6 +132,7 @@ div {
   clip: rect(0, 0, 0, 0);
 }
 
+
 /*
 Миксин для быстрого выравнивания блока по центру
 Пример использования:
@@ -152,6 +140,7 @@ div {
   @include center-block;
 }
 */
+
 @mixin center-block {
   position: absolute;
   top: 50%;

@@ -1,14 +1,14 @@
 body {
-    font-size: $font-size-base;
-    @include screen ("tablet", max) {
-        font-size: $font-size-small;
-    }
-    font-family: $font-family-base;
-    font-weight: $font-weight-base;
-    background-color: $background-color-main;
-    color: $color-base;
-    line-height: $line-height-base;
-    min-width: 320px;
+  font-size: $font-size-base;
+  @include screen ("tablet", max) {
+    font-size: $font-size-small;
+  }
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  background-color: $background-color-main;
+  color: $color-base;
+  line-height: $line-height-base;
+  min-width: 320px;
 }
 
 h1,
@@ -20,53 +20,56 @@ h6,
 p,
 ul,
 li {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    vertical-align: top;
-    max-width: 100%;
+  vertical-align: top;
+  max-width: 100%;
 }
 
 %heading-1 {
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 300;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 300;
 }
 
 %heading-2 {
-    font-size: 24px;
-    line-height: 1.125;
-    font-weight: 300;
+  font-size: 24px;
+  line-height: 1.125;
+  font-weight: 300;
 }
+
 %heading-3 {
-    font-size: 50px;
-    line-height: 1;
-    font-weight: 300;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 300;
 }
 
 %text-small {
-    font-size: 14px;
-    line-height: 1.35;
-    font-weight: 400;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 400;
 }
 
 %text-big {
-    font-size: 30px;
-    line-height: 1.5;
-    font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 700;
 }
-%links {text-decoration: none;
-    color: $background-color-main;
-    font-weight: 700;
-    font-size: $font-size-base;
-    
+
+%links {
+  text-decoration: none;
+  color: $background-color-main;
+  font-weight: 700;
+  font-size: $font-size-base;
 }
+
 .visually-hidden {
-	 @include visual-hide;
+  @include visual-hide;
 }

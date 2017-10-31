@@ -1,73 +1,55 @@
 .app-list {
-    font-size: 0;
-    text-align: center;
-  
-    
+  font-size: 0;
+  text-align: center;
+  &--pos {
+    margin-top: 27px;
+    margin-bottom: 27px;
+    @include screen ("tablet") {
+      margin-top: 45px;
+      margin-bottom: 41px;
+    }
+    @include screen ("desktop") {
+      margin-top: 64px;
+      margin-bottom: 57px;
+    }
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 30px;
+    width: 48px;
+    height: 57px;
+    &:last-child {
+      margin-right: 0;
+    }
     &--pos {
-        margin-top: 27px;
-        margin-bottom: 27px;
-        @include screen ("tablet") {
-       margin-top: 45px;
-            margin-bottom: 41px;
-        }
-        @include screen ("desktop") {
-           margin-top: 64px;
-            margin-bottom: 57px;
-            
-        }
+      position: relative;
     }
-    
-    &__item {
-        display: inline-block;
-        vertical-align: bottom;
-        margin-right: 30px;
-        width: 48px;
-        height: 57px;
-        &:last-child {
-            margin-right: 0;
-        }
-        
-        &--pos {
-            position: relative;
-
-        }
-        
-        &::before {
-            @include pseudo;
-            top: 0%;
-            left: 0%;
-            width: 48px;
-                height: 57px;
-            
-        }
-        
-        &--apple {
-            
-            &::before {
-                background: url("../img/icons/icon-apple.svg") no-repeat;
-              
-            }
-        }
-        &--android {
-            height: 48px;
-            
-            &::before {
-                background: url("../img//icons/icon-android.svg") no-repeat;
-                height: 48px;
-             
-            }
-        }
-        &--windows {
-            height: 45px;
-            
-            &::before {
-                background: url("../img//icons/icon-microsoft.svg") no-repeat;
-                height: 45px;
-
-            }
-        }     
-        
+    &::before {
+      @include pseudo;
+      top: 0%;
+      left: 0%;
+      width: 48px;
+      height: 57px;
     }
-
+    &--apple {
+      &::before {
+        background: url("../img/icon-apple.svg") no-repeat;
+      }
+    }
+    &--android {
+      height: 48px;
+      &::before {
+        background: url("../img/icon-android.svg") no-repeat;
+        height: 48px;
+      }
+    }
+    &--windows {
+      height: 45px;
+      &::before {
+        background: url("../img/icon-microsoft.svg") no-repeat;
+        height: 45px;
+      }
+    }
+  }
 }
- 
