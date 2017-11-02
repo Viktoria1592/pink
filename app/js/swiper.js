@@ -1,13 +1,28 @@
-var mySwiper = new Swiper ('.swiper-container', {
-// slidesPerView: 1,
+window.onload = function() {
+  var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 3,
+    // spaceBetween: 40,
     speed: 300,
-    centeredSlides: true,
     pagination: {
       el: '.swiper-pagination',
-        clickable: true,
+      clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+      nextEl: '.reviews-next',
+      prevEl: '.reviews-prev',
+    },
+    breakpoints: {
+      // 1280: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 40,
+      // },
+      // 1024: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 60,
+      // },
+      // 640: {
+      //   slidesPerView: 1,
+      // },
+    },
   });
+}

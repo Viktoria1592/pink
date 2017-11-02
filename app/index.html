@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <title>Pink Главная</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.3/css/swiper.min.css">
   <link rel="stylesheet" href="css/styles.min.css">
-   </head>
+</head>
 
 <body>
   <header class="page-header  page-header--color">
@@ -36,8 +37,14 @@
       </div>
     </nav>
     <div class="page-header__wrapper">
-      <div class="app-information"> <b class="app-information__title-main  app-information__title-main--pos">Взгляните на жизнь иначе!</b> <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white  link-item--pos  link-item--size" href="#">Скачать приложение</a>
-        <div class="app-list  app-list--pos"> <a class="app-list__item  app-list__item--pos  app-list__item--apple" href="#">Apple</a> <a class="app-list__item app-list__item--pos   app-list__item--android" href="#">Android</a> <a class="app-list__item  app-list__item--pos  app-list__item--windows" href="#">Windows</a> </div>
+      <div class="app-information">
+        <b class="app-information__title-main  app-information__title-main--pos">Взгляните на жизнь иначе!</b>
+        <a class="link-item  link-item--type-block  link-item--color-white  link-item--size-small  link-item--border-white  link-item--pos  link-item--size" href="#">Скачать приложение</a>
+        <div class="app-list  app-list--pos">
+          <a class="app-list__item  app-list__item--pos  app-list__item--apple" href="#">Apple</a>
+          <a class="app-list__item app-list__item--pos   app-list__item--android" href="#">Android</a>
+          <a class="app-list__item  app-list__item--pos  app-list__item--windows" href="#">Windows</a>
+        </div>
         <p class="app-information__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
       </div>
     </div>
@@ -52,29 +59,32 @@
     </div>
     <div class="features__list  features__list--color">
       <div class="features__block  features__wrapper">
-        <div class="features__photos"> 
-        <picture>
+        <div class="features__photos">
+          <picture>
             <source media="(min-width:1200px)" srcset="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x">
-            <img class="features__photo" src="" alt=""> 
+            <img class="features__photo" src="" alt="">
           </picture>
-            <picture>
+          <picture>
             <source media="(min-width:1200px)" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x">
-            <img class="features__photo" src="" alt=""> 
-            </picture>
+            <img class="features__photo" src="" alt="">
+          </picture>
           <picture>
             <source media="(min-width:1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
-            <source media="(min-width:700px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x"> 
-            <img class="features__photo" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Фото-3"> </picture>
+            <source media="(min-width:700px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+            <img class="features__photo" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Фото-3">
+          </picture>
         </div>
         <div class="features__points">
-          <div class="features__item"> <b class="features__item-title">Поднимает настроение</b>
+          <div class="features__item">
+            <b class="features__item-title">Поднимает настроение</b>
             <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов! </p>
           </div>
-          <div class="features__item"> <b class="features__item-title">Меняет мир вокруг</b>
+          <div class="features__item">
+            <b class="features__item-title">Меняет мир вокруг</b>
             <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </div>
-          <div class="features__item"> <b class="features__item-title">Заводит
-                    новых друзей</b>
+          <div class="features__item">
+            <b class="features__item-title">Заводит новых друзей</b>
             <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
         </div>
@@ -85,38 +95,39 @@
     <h2 class="advantages__title  visually-hidden">Эффект от нашего приложения</h2>
     <div class="advantages__wrapper">
       <div class="advantages__logo"></div>
-      <div class="advantages__description"> <b class="advantages__effect">Эффект
-            на 24 часа!
-            </b>
-        <p class="advantages__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки! </p> <a class="advantages__link-more" href="">Узнать больше об исследовании</a> </div>
+      <div class="advantages__description">
+        <b class="advantages__effect">Эффект на 24 часа!</b>
+        <p class="advantages__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки! </p>
+        <a class="advantages__link-more" href="#">Узнать больше об исследовании</a>
+      </div>
     </div>
   </section>
-  <section class="reviews  slider  swiper-container">
-      <h2 class="reviews__title  visually-hidden">Слайдер преимуществ</h2>
-      <div class="reviews__slider  slider__block  swiper-wrapper">
-        <button class="reviews__prew  swiper-button-prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next  swiper-button-next" type="button">Следующий отзыв</button>
-          <div class="reviews__description   swiper-slide"> 
-         <div class="reviews__description-wrapper">
-                 <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Петров</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
-                <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-           </div>
-          </div>
-          <div class="reviews__description  swiper-slide"> 
-           <div class="reviews__description-wrapper">
-           <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Козлов</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
-            <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-           </div>
-          <div class="reviews__description  swiper-slide"> 
-           <div class="reviews__description-wrapper">
-           <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Иванов</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
-            <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-             </div>
-          </div>
+  <section class="reviews slider swiper-container">
+    <h2 class="reviews__title visually-hidden">Слайдер преимуществ</h2>
+    <div class="reviews__slider slider__block swiper-wrapper">
+      <div class="reviews__description swiper-slide">
+        <div class="reviews__description-wrapper">
+          <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Петров</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+          <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </div>
-      <div class="reviews-slider__control  slider__control  swiper-pagination">
       </div>
+      <div class="reviews__description swiper-slide">
+        <div class="reviews__description-wrapper">
+          <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Козлов</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+          <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+      </div>
+      <div class="reviews__description swiper-slide">
+        <div class="reviews__description-wrapper">
+          <span class="reviews__photo"></span> <b class="reviews__client-name">Николай Иванов</b> <span class="reviews__client-description  reviews__client-description--hidden">25 лет, водитель трамвая</span>
+          <p class="reviews__client-review">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </div>
+      </div>
+    </div>
+    <button class="reviews__prew reviews-prev" type="button">Предыдущий отзыв</button>
+    <button class="reviews__next reviews-next" type="button">Следующий отзыв</button>
+    <div class="reviews-slider__control  slider__control  swiper-pagination">
+    </div>
   </section>
   <section class="prices-tarifs  prices-tarifs--color">
     <div class="prices-tarifs__wrapper">
@@ -152,9 +163,16 @@
     <div class="page-footer__contacts">
       <div class="page-footer__contacts-block  page-footer__wrapper">
         <h1 class="page-footer__title">Остались вопросы? Свяжитесь с нами!</h1>
-        <div class="page-footer__telephone-block"> <span>Звоните:</span> <a class="page-footer__telephone  page-footer__telephone--color-pink" href="tel:+7812555666666">8 (800) 1000 900</a> </div>
-        <div class="page-footer__email-block"> <span>Пишите:</span> <a class="page-footer__email  page-footer__email--color-pink" href="mailto:helo@pirkapp.ru">helo@pirkapp.ru</a> </div>
-        <div class="page-footer__address"> <span>Приезжайте в гости:</span> <span class="page-footer__address-description  page-footer__address-description--color-pink"> Санкт-Петербург, Невский проспект, д.20 </span> </div>
+        <div class="page-footer__telephone-block">
+          <span>Звоните:</span>
+          <a class="page-footer__telephone  page-footer__telephone--color-pink" href="tel:+7812555666666">8 (800) 1000 900</a> </div>
+        <div class="page-footer__email-block">
+          <span>Пишите:</span>
+          <a class="page-footer__email  page-footer__email--color-pink" href="mailto:helo@pirkapp.ru">helo@pirkapp.ru</a> </div>
+        <div class="page-footer__address">
+          <span>Приезжайте в гости:</span>
+          <span class="page-footer__address-description  page-footer__address-description--color-pink"> Санкт-Петербург, Невский проспект, д.20 </span>
+        </div>
       </div>
     </div>
     <div id="map" class="page-footer__map">
@@ -162,17 +180,22 @@
     <div class="page-footer__links  page-footer__wrapper">
       <div class="page-footer__logotype">
         <svg class="icon  icon__footer icon__footer--desktop" width="147" height="45">
-                <use xlink:href="img/svg-sprite.svg#logo-pink-blue-desktop"></use>
-              </svg>
-              <svg class="icon  icon__footer icon__footer--tablet" width="147" height="45">
-                <use xlink:href="img/svg-sprite.svg#logo-pink-blue-mobile"></use>
-              </svg>
+          <use xlink:href="img/svg-sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
+        <svg class="icon  icon__footer icon__footer--tablet" width="147" height="45">
+          <use xlink:href="img/svg-sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
       </div>
-      <div class="social-list"> <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--tw" href="#">Твитер</a> <a class="social-list__item    social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a> <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--ut" href="#">Ютуб</a> </div>
+      <div class="social-list">
+        <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--tw" href="#">Твитер</a>
+        <a class="social-list__item    social-list__item--border-gray  social-list__item--active-black  social-list__item--fb" href="#">Фейсбук</a>
+        <a class="social-list__item   social-list__item--border-gray  social-list__item--active-black  social-list__item--ut" href="#">Ютуб</a>
+      </div>
       <div class="page-footer__development"> <span class="page-footer__developer">Website by</span>
         <svg class="page-footer__developer-info" width="27" height="31">
           <use xlink:href="img/svg-sprite.svg#icon-developer"></use>
-        </svg> <span class="page-footer__buy">for</span>
+        </svg>
+        <span class="page-footer__buy">for</span>
         <svg class="page-footer__buy-info" width="28" height="37">
           <use xlink:href="img/svg-sprite.svg#icon-htmlacademy"></use>
         </svg>
@@ -182,19 +205,18 @@
   <script>
     var MainNav = document.querySelector('.nav-menu');
     var NavButton = document.querySelector('.nav-menu__header-navigation');
-    NavButton.addEventListener('click', function () {
+    NavButton.addEventListener('click', function() {
       if (MainNav.classList.contains('nav-menu--closed')) {
         MainNav.classList.remove('nav-menu--closed');
         MainNav.classList.add('nav-menu--opened');
-      }
-      else {
+      } else {
         MainNav.classList.add('nav-menu--closed');
         MainNav.classList.remove('nav-menu--opened');
       }
     });
   </script>
   <script src="js/libs/swiper.min.js"></script>
-   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"> </script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="js/main.min.js"></script>
 </body>
 
