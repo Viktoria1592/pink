@@ -2,6 +2,7 @@
   min-height: 66px;
   @include screen ("tablet") {
     width: 100%;
+      min-height: 91px;
   }
   &--pos {
     position: relative;

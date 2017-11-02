@@ -17,7 +17,8 @@ var svgmin = require('gulp-svgmin');
 var cache = require('gulp-cache');
 var spritesmith = require('gulp.spritesmith');
 var ghpages = require('gulp-gh-pages');
-var stylelint = require('stylelint')
+var stylelint = require('stylelint');
+var plumber = require('gulp-plumber');
 
 gulp.task('html', function() {
   gulp.src('app/*.html') //Выберем файлы по нужному пути
@@ -82,10 +83,23 @@ gulp.task('fonts', function() {
 
 
 gulp.task('scripts', function() {
-  return gulp.src('app/js/**/*') //при необходимости указываем нужные файлы библиотек
+  return gulp.src(['app/js/**/*', '!app/js/libs/**/*', '!app/js/libs']) //при необходимости указываем нужные файлы библиотек
+    .pipe(plumber())
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('build/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+gulp.task('libs', function() {
+  return gulp.src('app/js/libs/**/*')
+    .pipe(uglify())
+     .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('build/js/libs'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -154,7 +168,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('build', function(fn) {
-  run('clean', 'html', 'sass', 'scripts', 'symbols', 'sprite', 'fonts', 'image', fn)
+  run('clean', 'html', 'sass', 'scripts', 'libs', 'symbols', 'sprite', 'fonts', 'image', fn)
 });
 
 gulp.task('deploy', function ()  {
@@ -175,7 +189,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
   gulp.watch('app/**/*.html', ['html']); // Наблюдение за HTML файлами в корне проекта
-  gulp.watch('app/js/**/*.js', ['scripts']); // Наблюдение за JS файлами в папке js
+  gulp.watch('app/js/*.js', ['scripts']); // Наблюдение за JS файлами в папке js
+gulp.watch('app/js/libs/**/*', ['libs']);
   gulp.watch('app/img/**/*', ['image']);
   gulp.watch('app/icons/**/*', ['symbols'])
 });

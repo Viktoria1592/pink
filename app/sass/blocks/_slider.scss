@@ -1,12 +1,6 @@
 .slider {
-  &__wrapper {
-    @include wrapper;
-  }
   &__block {
-    position: relative;
-  }
-  &__input {
-    display: none;
+    position: relative;   
   }
   &__control {
     position: absolute;
@@ -18,13 +12,14 @@
       left: 45%;
     }
   }
-  &__toggle {
-    width: 6px;
+}
+.swiper-pagination-bullet {
+	    width: 6px;
     height: 6px;
     display: inline-block;
+    margin-right: 15px;
     cursor: pointer;
     transition: all 0.3s linear;
-    &--color-black {
       background-color: $color-gray;
       border-radius: 50%;
       border: 3px solid $background-color-main;
@@ -36,9 +31,14 @@
         opacity: 0.1;
         background-color: $color-base;
       }
+    &-active {
+        background-color: $background-color-main;
+  border-color: $color-base;
     }
-    &--pos {
-      margin-right: 15px;
-    }
-  }
 }
+.swiper-slide {
+
+	display: flex;
+} 
+
+

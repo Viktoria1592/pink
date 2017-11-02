@@ -11,16 +11,26 @@
     background-color: $color-base;
     background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
     background-position: 0% 40%, 0% 0%;
+      background-size: 258px, 700px;
     background-repeat: no-repeat;
+      @media (min-resolution: 1.5dppx) {
+           background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+      }
     @include screen ("tablet") {
       background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
       background-position: 50% 100%, 50% 50%;
-      background-size: auto, auto;
+      background-size: 700px, 1200px;
+        @media (min-resolution: 1.5dppx) {
+            background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+        }
     }
     @include screen ("desktop") {
       background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
       background-position: 60% 100%, 50% 50%;
-      background-size: auto, 100% 100%;
+      background-size: 1050px, 2560px;
+        @media (min-resolution: 1.5dppx) {
+             background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+        }
     }
   }
   &__wrapper {
