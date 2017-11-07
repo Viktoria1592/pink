@@ -1,11 +1,8 @@
-/*
-Миксин для треугольников, сделанных через :before и :after
-Пример:
-div::after {
-  @include triangle(black, top, 10px);
-}
-*/
-
+//Миксин для треугольников, сделанных через :before и :after
+//Пример:
+//div::after {
+//  @include triangle(black, top, 10px);
+//}
 @mixin triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
   @include pseudo($pos: $position);
   width: 0;
@@ -50,38 +47,30 @@ div::after {
   }
 }
 
-
-/*
-Миксин для базовых параметров псевдоэлементов.
-Пример использования:
-div::after {
-  @include pseudo;
-  top: 10px;
-  left: 10px;
-  width: 150px;
-}
-*/
-
+//Миксин для базовых параметров псевдоэлементов.
+//Пример использования:
+//div::after {
+//  @include pseudo;
+//  top: 10px;
+//  left: 10px;
+//  width: 150px;
+//}
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
 }
 
-
-/*
-Миксин для медиа-запросов
-Пример использования:
-div {
-  @include screen('phone') {
-    // Правила для разрешений выше 'phone'
-  }
-  @include screen('phone', max) {
-    // Правила для разрешений ниже 'phone'
-  }
-}
-*/
-
+//Миксин для медиа-запросов
+//Пример использования:
+//div {
+//  @include screen('phone') {
+//    // Правила для разрешений выше 'phone'
+//  }
+//  @include screen('phone', max) {
+//    // Правила для разрешений ниже 'phone'
+//  }
+//}
 $breakpoints: ( 'phone': 320px, 'phone-wide': 480px, 'phablet': 560px, 'tablet-small': 640px, 'tablet': 700px, 'tablet-wide': 1024px, 'desktop': 1200px, 'desktop-wide': 1440px);
 @mixin screen($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
@@ -95,15 +84,11 @@ $breakpoints: ( 'phone': 320px, 'phone-wide': 480px, 'phablet': 560px, 'tablet-s
   }
 }
 
-
-/*
-Миксин для быстрого добавления clearfix.
-Пример использования:
-.parent {
-  @include clearfix;
-}
-*/
-
+//Миксин для быстрого добавления clearfix.
+//Пример использования:
+//.parent {
+//  @include clearfix;
+//}
 @mixin clearfix {
   &::after {
     content: '';
@@ -112,16 +97,12 @@ $breakpoints: ( 'phone': 320px, 'phone-wide': 480px, 'phablet': 560px, 'tablet-s
   }
 }
 
-
-/*
-Миксин для того, чтоб скрыть элемент, но при этом он все равно рендерился
-и был доступен в DOM.
-Пример использования:
-div {
-  @include visual-hide;
-}
-*/
-
+//Миксин для того, чтоб скрыть элемент, но при этом он все равно рендерился
+//и был доступен в DOM.
+//Пример использования:
+//div {
+//  @include visual-hide;
+//}
 @mixin visual-hide() {
   margin: 0;
   padding: 0;
@@ -132,15 +113,11 @@ div {
   clip: rect(0, 0, 0, 0);
 }
 
-
-/*
-Миксин для быстрого выравнивания блока по центру
-Пример использования:
-div {
-  @include center-block;
-}
-*/
-
+//Миксин для быстрого выравнивания блока по центру
+//Пример использования:
+//div {
+//  @include center-block;
+//}
 @mixin center-block {
   position: absolute;
   top: 50%;

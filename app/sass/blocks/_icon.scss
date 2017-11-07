@@ -1,52 +1,49 @@
 .icon {
-&__header {
-  display: none;
-  fill: $background-color-main;
-  transition: 0.3s linear;
+  &__header {
+    display: none;
+    fill: $background-color-main;
+    transition: 0.3s linear;
     &:hover {
       fill: $color-text-footer;
-  }
-      &:active {
-        fill: $color-gray;
+    }
+    &:active {
+      fill: $color-gray;
+    }
+    &--mobile {
+      @include screen ("tablet", max) {
+        display: block;
       }
-  &--mobile {
-   @include screen ("tablet", max) {
-      display: block;
+    }
+    &--tablet {
+      @media (min-width: 700px) and (max-width: 1199px) {
+        display: block;
+      }
+    }
+    &--desktop {
+      @include screen ("desktop") {
+        display: block;
+      }
     }
   }
-  &--tablet {
-    @media (min-width:700px) and (max-width:1199px) {
-      display: block;
-    }
-  }
-
-  &--desktop {
-    @include screen ("desktop") {
-      display: block;
-    }
-  }
-}
   &__footer {
-     display: none;
-  fill: $color-text-footer;
-  transition: 0.3s linear;
+    display: none;
+    fill: $color-text-footer;
+    transition: 0.3s linear;
     &:hover {
       fill: $color-base;
-  }
-      &:active {
-        fill: $color-gray;
+    }
+    &:active {
+      fill: $color-gray;
+    }
+    &--tablet {
+      @media (min-width: 700px) and (max-width: 1199px) {
+        display: block;
       }
-  &--tablet {
-    @media (min-width:700px) and (max-width:1199px) {
-      display: block;
     }
-  }
-
-  &--desktop {
-    @include screen ("desktop") {
-      display: block;
+    &--desktop {
+      @include screen ("desktop") {
+        display: block;
+      }
     }
-  }
   }
 }
-

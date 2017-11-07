@@ -49,6 +49,7 @@
       bottom: -35px;
       left: 0;
       z-index: 100;
+      pointer-events: none;
       @include screen ("tablet") {
         height: 70px;
         bottom: -70px;
@@ -134,26 +135,27 @@
     background-image: url("/../img/bg-map-mobile.jpg");
     width: 100%;
     height: 200px;
-      @media (min-resolution: 1.5dppx) {
-          background-image: url("/../img/bg-map-mobile@2x.jpg");
-      }
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("/../img/bg-map-mobile@2x.jpg");
+    }
     @include screen ("tablet") {
       height: 375px;
       background-image: url("/../img/bg-map-tablet.jpg");
-        @media (min-resolution: 1.5dppx) {
-          background-image: url("/../img/bg-map-tablet@2x.jpg");  
-        }
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("/../img/bg-map-tablet@2x.jpg");
+      }
     }
     @include screen ("desktop") {
       height: 510px;
       background-image: url("/../img/bg-map-desktop.jpg");
-        @media (min-resolution: 1.5dppx) {
-          background-image: url("/../img/bg-map-desktop@2x.jpg");  
-        }
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("/../img/bg-map-desktop@2x.jpg");
+      }
     }
   }
   &__links {
-    @include screen ("tablet", max) {
+    @include screen ("tablet",
+    max) {
       display: none;
     }
     display: flex;

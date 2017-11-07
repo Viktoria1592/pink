@@ -2,7 +2,7 @@
   min-height: 66px;
   @include screen ("tablet") {
     width: 100%;
-      min-height: 91px;
+    min-height: 91px;
   }
   &--pos {
     position: relative;
@@ -30,6 +30,14 @@
     text-transform: uppercase;
     @include screen ("tablet") {
       padding-top: 0;
+    }
+  }
+  &__menu-link--center {
+    @include wrapper;
+    box-sizing: border-box;
+    @include screen ("desktop") {
+      margin: 0;
+      width: auto;
     }
   }
   &__header-navigation {
@@ -74,25 +82,6 @@
         }
       }
     }
-    //        &--active {
-    //            @include screen ("tablet") {
-    //                position: relative;
-    //            &::before {
-    //                @include pseudo;
-    //                    left: 15px;
-    //                    right: 15px;
-    //                    bottom: 0;
-    //                    height: 3px;
-    ////                    background-color: $color-menu;
-    //                }
-    //            }
-    //              @include screen ("desktop") {
-    //                  &::before {
-    //                left: 30px;
-    //                right: 30px;
-    //            }
-    //            }
-    //        }
     a[href] {
       transition: 0.3s linear;
       @include screen ("desktop", max) {
@@ -126,9 +115,6 @@
           opacity: 0;
         }
       }
-    }
-    &--bg-color {
-      //            background-color: $color-menu;
     }
   }
 }

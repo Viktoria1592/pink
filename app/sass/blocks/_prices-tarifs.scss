@@ -1,6 +1,7 @@
 .prices-tarifs {
   padding-top: 90px;
   padding-bottom: 100px;
+  position: relative;
   @include screen ("tablet") {
     padding-bottom: 66px;
   }
@@ -13,9 +14,16 @@
   }
   &__wrapper {
     @include wrapper;
+    @include screen ("tablet", max) {
+      overflow: hidden;
+    }
   }
   &__list {
     border-collapse: collapse;
+    transition: transform .8s;
+    @include screen ("tablet", max) {
+      width: 960px;
+    }
     @include screen ("tablet") {
       width: 100%;
       font-size: 14px;
@@ -28,13 +36,16 @@
     position: relative;
     background-color: $background-color-main;
     border: 1px solid #e5e5e5;
-    @include screen ("tablet") {
-      padding: 15px;
-      width: 25%;
-      box-sizing: border-box;
-    }
+    padding: 15px;
+    width: 25%;
+    box-sizing: border-box;
     @include screen ("desktop") {
       padding: 18px;
+    }
+  }
+  &__description--hidden {
+    @include screen ("tablet", max) {
+      display: none;
     }
   }
   &__description--color {
@@ -62,7 +73,7 @@
       text-align: center;
       font-weight: 800;
       top: 5px;
-      left: -25px;
+      left: -23px;
     }
   }
   &__description--red {
@@ -72,8 +83,13 @@
       width: 20px;
       height: 1px;
       background-color: $color-text-footer;
-      top: 50%;
-      left: 50%;
+      top: 45%;
+      @include screen ("tablet") {
+        left: 50%;
+      }
+      @include screen ("tablet", max) {
+        right: 20px;
+      }
     }
     &::before {
       transform: rotate(45deg);
@@ -91,20 +107,29 @@
       border-top: none;
       border-right: none;
       transform: rotate(-45deg);
-      top: 50%;
-      left: 50%;
+      top: 45%;
+      @include screen ("tablet") {
+        left: 50%;
+      }
+      @include screen ("tablet", max) {
+        right: 20px;
+      }
+    }
+  }
+  &__hidden-text {
+    text-transform: uppercase;
+    @include screen ("tablet") {
+      display: none;
     }
   }
   &__name {
     display: block;
     text-align: center;
-    @include screen ("tablet") {
-      font-size: 16px;
-      color: $background-color-main;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding-bottom: 10px;
-    }
+    color: $background-color-main;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-size: 16px;
     @include screen ("desktop") {
       font-size: 18px;
     }
@@ -112,14 +137,41 @@
   &__cost {
     display: block;
     text-align: center;
-    @include screen ("tablet") {
-      font-size: 18px;
-      color: $background-color-main;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+    font-size: 18px;
+    color: $background-color-main;
+    font-weight: 300;
+    text-transform: uppercase;
     @include screen ("desktop") {
       font-size: 24px;
     }
+  }
+}
+
+.prices-tarifs-slider {
+  &__control {
+    position: absolute;
+    left: 0%;
+    z-index: 100;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@include screen ("tablet", max) {
+  #prices-slide-1:checked ~ .prices-tarifs__wrapper label[for="prices-slide-1"],
+  #prices-slide-2:checked ~ .prices-tarifs__wrapper label[for="prices-slide-2"],
+  #prices-slide-3:checked ~ .prices-tarifs__wrapper label[for="prices-slide-3"] {
+    background-color: $background-color-main;
+    border-color: $color-base;
+  }
+  #prices-slide-1:checked ~ .prices-tarifs__wrapper .prices-tarifs__list {
+    transform: translate(0);
+  }
+  #prices-slide-2:checked ~ .prices-tarifs__wrapper .prices-tarifs__list {
+    transform: translate(-320px);
+  }
+  #prices-slide-3:checked ~ .prices-tarifs__wrapper .prices-tarifs__list {
+    transform: translate(-640px);
   }
 }

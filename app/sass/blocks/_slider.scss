@@ -1,6 +1,6 @@
 .slider {
   &__block {
-    position: relative;   
+    position: relative;
   }
   &__control {
     position: absolute;
@@ -12,33 +12,56 @@
       left: 45%;
     }
   }
-}
-.swiper-pagination-bullet {
-	    width: 6px;
-    height: 6px;
-    display: inline-block;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: all 0.3s linear;
+  &__toggle {
+    @include screen ("tablet", max) {
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      margin-right: 15px;
+      cursor: pointer;
+      transition: all 0.3s linear;
       background-color: $color-gray;
       border-radius: 50%;
-      border: 3px solid $background-color-main;
+      border: 3px solid #f2f2f2;
+      ;
       transition: 0.3s linear;
       &:hover {
         background-color: #7e868f;
       }
-      &:active {
-        opacity: 0.1;
-        background-color: $color-base;
+      &--pos {
+        margin-right: 15px;
       }
-    &-active {
-        background-color: $background-color-main;
-  border-color: $color-base;
     }
+  }
+  &__input {
+    display: none;
+  }
 }
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  margin-right: 15px!important;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  background-color: $color-gray;
+  border-radius: 50%;
+  border: 3px solid $background-color-main;
+  transition: 0.3s linear;
+  &:hover {
+    background-color: #7e868f;
+  }
+  &:active {
+    opacity: 0.1;
+    background-color: $color-base;
+  }
+  &-active {
+    background-color: $background-color-main;
+    border-color: $color-base;
+  }
+}
+
 .swiper-slide {
-
-	display: flex;
-} 
-
-
+  display: flex;
+}

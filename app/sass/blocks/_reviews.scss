@@ -27,11 +27,11 @@
       bottom: -85px;
     }
   }
-    &__description-wrapper {
-        @include wrapper;
-         display: flex;
+  &__description-wrapper {
+    @include wrapper;
+    display: flex;
     flex-direction: column;
-    }
+  }
   &__photo {
     @include screen ("desktop", max) {
       display: none;
@@ -71,7 +71,8 @@
     text-align: center;
   }
   &__client-description--hidden {
-    @include screen ("tablet", max) {
+    @include screen ("tablet",
+    max) {
       display: none;
     }
   }
@@ -103,8 +104,13 @@
     cursor: pointer;
     z-index: 300;
     background-color: transparent;
-    @include screen ("desktop", max) {
+    @include screen ("desktop",
+    max) {
       display: none;
+    }
+    &:hover::after,
+    &:hover::before {
+      border-color: gray;
     }
   }
   &__prew {
@@ -141,7 +147,6 @@
       min-height: 337px;
     }
   }
-    
 }
 
 .reviews-slider__control {
@@ -149,4 +154,3 @@
     display: none;
   }
 }
-
